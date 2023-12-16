@@ -1,0 +1,126 @@
+:root {
+  font-size: 20px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(200, 100%, 85%);
+  color: hsl(200, 100%, 10%);
+}
+
+.blurred {
+  filter: blur(3px);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-right: 2px solid hsl(200, 100%, 10%);
+}
+
+.weather-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.weather-icon.large {
+  width: 100px;
+  height: 100px;
+}
+
+.header-current-info {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-current-temp {
+  font-size: 2rem;
+}
+
+.header-right {
+  display: grid;
+  width: 50%;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: hsl(200, 100%, 20%);
+}
+
+.value-sub-info {
+  font-size: 0.75rem;
+  font-weight: light;
+}
+
+.day-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 110px);
+  gap: 0.75rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.day-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid hsl(200, 100%, 10%);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.day-card-day {
+  font-size: 0.75rem;
+  color: hsl(200, 100%, 20%);
+  margin-top: 0.5rem;
+}
+
+.hour-section {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+}
+
+.hour-row {
+  background-color: hsl(200, 60%, 75%);
+}
+
+.hour-row:nth-child(2n) {
+  background-color: hsl(200, 60%, 70%);
+}
+
+.hour-row > td {
+  padding: 0.25rem 0.5rem;
+}
