@@ -3,6 +3,7 @@
 *::before {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -17,7 +18,7 @@ body {
   min-height: 100vh;
   background-color: #000;
   font-family: "Helvetica-Condensed-Bold", sans-serif;
-  font-size: 350px;
+  font-size: 20vw;
   color: #b9b9b9;
 }
 
