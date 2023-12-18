@@ -4,7 +4,7 @@ export default class Tile {
   #y;
   #value;
 
-  constructor(tileContainer, value = Math.random() > 0.5 ? 2 : 4) {
+  constructor(tileContainer, value = Math.random() > 0.5 ? 512 : 2048) {
     this.#tileElement = document.createElement("div");
     this.#tileElement.classList.add("tile");
     tileContainer.append(this.#tileElement);
@@ -18,6 +18,9 @@ export default class Tile {
   set value(v) {
     this.#value = v;
     this.#tileElement.textContent = v;
+
+    if (v > 1000) this.#tileElement.style.fontSize = "0.8em";
+
     const power = Math.log2(v);
     const backgroundLightness = 100 - power * 9;
     this.#tileElement.style.setProperty(

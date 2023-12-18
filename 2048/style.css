@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "ClearSans";
+  src: url("ClearSans-Bold.woff");
+}
+
 body {
   background-color: #333;
   display: flex;
@@ -11,7 +16,8 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  font-size: 7.5vmin;
+  font-family: "ClearSans", sans-serif;
+  font-size: 4vmin;
 }
 
 #game-board {
