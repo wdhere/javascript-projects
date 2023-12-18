@@ -39,6 +39,10 @@ body {
   background: rgba(255, 255, 255, 0.9);
 }
 
+button {
+  color: #000;
+}
+
 button[data-operation],
 button[data-equals] {
   background: rgba(240, 240, 240, 0.75);
